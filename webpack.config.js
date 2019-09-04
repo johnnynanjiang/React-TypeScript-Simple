@@ -11,16 +11,26 @@ module.exports = {
     devServer: {
         contentBase: './dist',
     },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx"]
+    },
     module: {
         rules: [
+            // changed from { test: /\.jsx?$/, use: { loader: 'babel-loader' } },
             {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: ['babel-loader', 'eslint-loader']
-            }
+                test: /\.(t|j)sx?$/,
+                use: ['awesome-typescript-loader', 'eslint-loader'],
+                exclude: /node_modules/
+            },
+            // addition - add source-map support
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
+            },
         ]
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     plugins: [
         new HtmlWebpackPlugin({ template: path.resolve('./index.html'), })
     ],
