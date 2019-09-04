@@ -2,10 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.tsx',
     output: {
         path: __dirname + '/dist',
-        publicPath: '/',
+        publicPath: '/dist',
         filename: 'bundle.js'
     },
     devServer: {
@@ -24,8 +24,8 @@ module.exports = {
             },
             // addition - add source-map support
             {
-                enforce: "pre",
                 test: /\.js$/,
+                enforce: "pre",
                 loader: "source-map-loader"
             },
         ]

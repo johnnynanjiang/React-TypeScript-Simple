@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 class Welcome extends React.Component {
     render() {
-        return <h1>"Hello World!" from React TypeScript Simple</h1>;
+        return <h1>"Hello World!" from React TypeScript Simple v0.02</h1>;
     }
 }
 
