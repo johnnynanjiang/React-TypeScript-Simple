@@ -1,7 +1,7 @@
 export class Account {
-    id: string;
-    accountName: string;
-    institution: string;
-    currency: string;
-    balance: number;
+    id: string = "id";
+    accountName: string = "n/a";
+    institution: string = "n/a";
+    currency: string = "AUD";
+    balance: number = 0.00;
 }
