@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { AccountRepository } from "./component/AccountRepository";
+import { AccountsComponent } from "./component/AccountsComponent";
 
 class Welcome extends React.Component {
     render() {
         return (
             <div>
                 <h1>"Hello World!" from React TypeScript Simple v0.02</h1>
-                <AccountRepository />
+                <AccountsComponent />
             </div>
         );
     }

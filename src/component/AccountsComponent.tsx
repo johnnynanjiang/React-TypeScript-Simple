@@ -14,7 +14,7 @@ interface IState {
 
 const API_URL = "https://raw.githubusercontent.com/johnnynanjiang/MoneytreeLight/master/app/src/main/assets/json/accounts.json";
 
-export class AccountRepository extends Component<IProps, IState> {
+export class AccountsComponent extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
 
